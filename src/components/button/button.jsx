@@ -1,7 +1,7 @@
 import './button.css';
 
 const Button = props => {
-	const { type, title, disable, oncheckout } = props;
+	const { title,oncheckout,type, disable } = props;
 
 	return (
 		<button
