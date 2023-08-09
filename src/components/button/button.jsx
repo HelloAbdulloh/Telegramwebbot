@@ -1,7 +1,7 @@
 import './button.css';
 
 const Button = props => {
-	const { type, title, onClick, disable } = props;
+	const { type, title, disable, oncheckout } = props;
 
 	return (
 		<button
@@ -9,7 +9,7 @@ const Button = props => {
 				(type === 'remove' && 'remove') ||
 				(type === 'checkout' && 'checkout') ||
 				(disable === true && 'disabled')}`}
-			onClick={onClick}  
+			onClick={()=> oncheckout()}  
 			disabled={disable}
 			>
 			{title}

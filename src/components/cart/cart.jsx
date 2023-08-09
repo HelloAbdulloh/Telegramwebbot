@@ -10,7 +10,7 @@ function cart({cartItems,oncheckout}) {
         <p>Umimiya narx {totalPrice(cartItems).toLocaleString("en-US", {
                 style: 'currency',
                 currency: 'USD'})}</p>
-        <Button title={`${cartItems.length === 0 ? 'buyurtma berish' : "Tolov"}`} onClick={()=> oncheckout()} disable={cartItems.length === 0 ? true : false} type={'checkout'}/>
+        <Button title={`${cartItems.length === 0 ? 'buyurtma berish' : "Tolov"}`} oncheckout={oncheckout} disable={cartItems.length === 0 ? true : false} type={'checkout'}/>
     </div>
   )
 }

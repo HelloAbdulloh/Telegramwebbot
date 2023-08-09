@@ -5,6 +5,7 @@ import Cart from './components/cart/cart'
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { useCallback } from 'react'
 
 
 const cources = getData();
@@ -47,9 +48,19 @@ function App() {
   };
 
   const oncheckout = () =>{
-    telegram.MainButton.text = 'Sotib olish :>';
+    telegram.MainButton.text = 'Sotib olish';
     telegram.MainButton.show();
   }
+
+  const onSendData = useCallback(()=> {
+    telegram.sendData(JSON.stringify(cartItems));
+  },[cartItems]);
+
+  useEffect(()=>{
+    telegram.onEvent('mainButtonClicked', onSendData);
+
+    return () => telegram.offEvent('mainButtonClicked',onSendData)
+  },[onSendData]);
 
   return (
     <>
