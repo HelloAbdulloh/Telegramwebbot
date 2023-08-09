@@ -1,0 +1,56 @@
+:root{
+    --primary-color: #e0c521;
+}
+
+.btn{
+    padding: 1rem 0.8rem;
+    font-size: 20px;
+    text-align: center;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.btn.add{
+    background: var(--primary-color);
+}
+
+.btn.remove{
+    background: tomato;
+}
+
+.btn.checkout{
+    background: #47bb77cc;
+    width: 150px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn.add:hover{
+    background: #cab328;
+}
+
+.btn.add:active{
+    background: #ad9a1c;
+}
+
+.btn.remove:hover{
+    background: rgb(289, 83, 61);
+}
+
+.btn.remove:active{
+    background: rgb(185, 73, 54);
+}
+
+.btn.checkout:hover{
+    background: #47bb78;
+}
+
+.btn.checkout:active{
+    background: rgb(30, 93,41);
+}
+
+.btn.disabled{
+    opacity: 0.1 !important;
+}

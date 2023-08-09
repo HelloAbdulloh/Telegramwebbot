@@ -1,0 +1,8 @@
+.cart__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    grid-area: 10px;
+    gap: 10px;
+}
