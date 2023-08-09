@@ -59,7 +59,7 @@ function App() {
   useEffect(()=>{
     telegram.onEvent('mainButtonClicked', onSendData);
     console.log('123');
-    return () => telegram.offEvent('mainButtonClicked',onSendData)
+    return () => telegram.offEvent('mainButtonClicked', onSendData);
   },[onSendData]);
 
   return (
